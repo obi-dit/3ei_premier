@@ -479,8 +479,8 @@ export default function Plans() {
                 Not sure which plan is right for you?
               </h3>
               <p className="text-slate-600 mb-8 max-w-2xl mx-auto text-lg">
-                Let's discuss your specific needs. We'll create a custom IT
-                strategy that fits your business and budget perfectly.
+                Let&apos;s discuss your specific needs. We&apos;ll create a
+                custom IT strategy that fits your business and budget perfectly.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a

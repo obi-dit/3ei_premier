@@ -116,7 +116,7 @@ export default function Services() {
 
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             End-to-end technology support designed for Wyoming businesses. From
-            cybersecurity to cloud migration, we've got you covered.
+            cybersecurity to cloud migration, we&apos;ve got you covered.
           </p>
 
           <motion.div

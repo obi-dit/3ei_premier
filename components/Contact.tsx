@@ -148,12 +148,12 @@ export default function Contact() {
 
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-[#215096] via-[#009688] to-[#8BC34A] bg-clip-text text-transparent">
-              Let's Talk About Your IT
+              Let&apos;s Talk About Your IT
             </span>
           </h2>
 
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your technology? Fill out the form and we'll
+            Ready to transform your technology? Fill out the form and we&apos;ll
             reach out within one business day.
           </p>
         </motion.div>
@@ -596,8 +596,8 @@ export default function Contact() {
                         transition={{ delay: 0.5 }}
                         className="text-slate-600 mb-2"
                       >
-                        Thanks for reaching out! We'll get back to you within
-                        one business day.
+                        Thanks for reaching out! We&apos;ll get back to you
+                        within one business day.
                       </motion.p>
 
                       <motion.p

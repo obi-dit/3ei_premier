@@ -10,7 +10,6 @@ import {
   User,
   Building2,
   Phone,
-  CheckCircle2,
   Shield,
 } from "lucide-react";
 import { motion } from "framer-motion";
