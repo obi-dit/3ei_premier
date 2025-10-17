@@ -1,10 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, X, LogIn } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import Logo from "@/components/Logo";
-import Link from "next/link";
 
 const BRAND = {
   name: "3i Premier Tech Solutions",
@@ -43,7 +41,7 @@ export default function Nav() {
                 {n.label}
               </a>
             ))}
-            <Link href="/login">
+            {/* <Link href="/login">
               <Button
                 variant="outline"
                 className="rounded-2xl border-2 border-slate-200 hover:border-[#215096] hover:text-[#215096] transition-all"
@@ -56,7 +54,7 @@ export default function Nav() {
               <Button className="rounded-2xl bg-gradient-to-r from-[#215096] to-[#009688] hover:from-[#215096]/90 hover:to-[#009688]/90">
                 Get Support
               </Button>
-            </a>
+            </a> */}
           </nav>
 
           <button
@@ -69,7 +67,7 @@ export default function Nav() {
         </div>
       </div>
 
-      {open && (
+      {/* {open && (
         <div className="md:hidden border-t bg-white">
           <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-3">
             {navItems.map((n) => (
@@ -98,7 +96,7 @@ export default function Nav() {
             </a>
           </div>
         </div>
-      )}
+      )} */}
     </header>
   );
 }
