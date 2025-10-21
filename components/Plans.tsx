@@ -406,7 +406,13 @@ export default function Plans() {
 
                       {/* CTA Button */}
                       <motion.a
-                        href="#contact"
+                        href={
+                          displayPrice
+                            ? `/get-started?plan=${tier.name.toLowerCase()}&billing=${
+                                isAnnual ? "annual" : "monthly"
+                              }`
+                            : "#contact"
+                        }
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
                       >
