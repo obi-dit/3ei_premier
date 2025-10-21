@@ -45,9 +45,9 @@ export default function Plans() {
       monthlyPrice: 79,
       annualPrice: 71,
       icon: Headset,
-      color: "from-[#215096] to-[#1976D2]",
-      bgColor: "bg-[#215096]/5",
-      borderColor: "border-[#215096]/20",
+      color: "from-[#4A8FD9] to-[#5BA3E0]",
+      bgColor: "bg-[#4A8FD9]/10",
+      borderColor: "border-[#4A8FD9]/20",
       pitch: "Best for teams getting started with managed IT.",
       features: [
         { text: "Unlimited remote support", icon: Headset },
@@ -62,9 +62,9 @@ export default function Plans() {
       monthlyPrice: 119,
       annualPrice: 107,
       icon: Shield,
-      color: "from-[#009688] to-[#00BCD4]",
-      bgColor: "bg-[#009688]/5",
-      borderColor: "border-[#009688]/30",
+      color: "from-[#26B5A6] to-[#3DC9BA]",
+      bgColor: "bg-[#26B5A6]/10",
+      borderColor: "border-[#26B5A6]/30",
       pitch: "Security‑forward plan with compliance basics.",
       features: [
         { text: "Everything in Essential", icon: Check },
@@ -80,9 +80,9 @@ export default function Plans() {
       monthlyPrice: null,
       annualPrice: null,
       icon: Server,
-      color: "from-[#8BC34A] to-[#CDDC39]",
-      bgColor: "bg-[#8BC34A]/5",
-      borderColor: "border-[#8BC34A]/20",
+      color: "from-[#A5D96A] to-[#B8E285]",
+      bgColor: "bg-[#A5D96A]/10",
+      borderColor: "border-[#A5D96A]/20",
       pitch: "Advanced security, SOC, and governance.",
       features: [
         { text: "XDR + SOC 24/7", icon: Shield },
@@ -97,7 +97,7 @@ export default function Plans() {
   return (
     <motion.section
       id="plans"
-      className="relative py-24 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden"
+      className="relative py-24 bg-gradient-to-b from-background via-background/95 to-background overflow-hidden"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.2 }}
@@ -141,26 +141,26 @@ export default function Plans() {
           </div>
 
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-[#215096] via-[#009688] to-[#8BC34A] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#4A8FD9] via-[#26B5A6] to-[#A5D96A] bg-clip-text text-transparent">
               Simple, Transparent Pricing
             </span>
           </h2>
 
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
             Per‑user pricing with no long‑term lock‑ins. Choose monthly or
             annual billing. Cancel anytime.
           </p>
 
           {/* Billing Toggle */}
           <motion.div
-            className="inline-flex items-center gap-4 p-2 bg-white rounded-full shadow-lg border border-slate-200"
+            className="inline-flex items-center gap-4 p-2 bg-card rounded-full shadow-lg border border-border"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
             <span
               className={`px-4 py-2 text-sm font-semibold transition-colors ${
-                !isAnnual ? "text-[#215096]" : "text-slate-500"
+                !isAnnual ? "text-[#4A8FD9]" : "text-muted-foreground"
               }`}
             >
               Monthly
@@ -169,8 +169,8 @@ export default function Plans() {
               onClick={() => setIsAnnual(!isAnnual)}
               className={`relative w-16 h-8 rounded-full transition-colors ${
                 isAnnual
-                  ? "bg-gradient-to-r from-[#215096] to-[#009688]"
-                  : "bg-slate-300"
+                  ? "bg-gradient-to-r from-[#4A8FD9] to-[#26B5A6]"
+                  : "bg-muted"
               }`}
               whileTap={{ scale: 0.95 }}
             >
@@ -184,14 +184,14 @@ export default function Plans() {
             </motion.button>
             <span
               className={`px-4 py-2 text-sm font-semibold transition-colors ${
-                isAnnual ? "text-[#215096]" : "text-slate-500"
+                isAnnual ? "text-[#4A8FD9]" : "text-muted-foreground"
               }`}
             >
               Annual
             </span>
             {isAnnual && (
               <motion.span
-                className="px-3 py-1 bg-gradient-to-r from-[#8BC34A] to-[#CDDC39] text-white text-xs font-bold rounded-full"
+                className="px-3 py-1 bg-gradient-to-r from-[#A5D96A] to-[#B8E285] text-white text-xs font-bold rounded-full"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ type: "spring", stiffness: 500, damping: 20 }}
@@ -232,7 +232,7 @@ export default function Plans() {
                     transition={{ delay: 0.5 }}
                   >
                     <motion.div
-                      className="px-6 py-2 bg-gradient-to-r from-[#009688] to-[#00BCD4] text-white text-sm font-bold rounded-full shadow-xl"
+                      className="px-6 py-2 bg-gradient-to-r from-[#26B5A6] to-[#3DC9BA] text-white text-sm font-bold rounded-full shadow-xl"
                       animate={{
                         scale: [1, 1.05, 1],
                       }}
@@ -258,10 +258,10 @@ export default function Plans() {
                   <Card
                     className={`relative overflow-hidden ${
                       tier.highlight
-                        ? "border-3 border-[#009688] shadow-2xl"
+                        ? "border-3 border-[#26B5A6] shadow-2xl"
                         : "border shadow-lg"
                     } rounded-3xl h-full group backdrop-blur-sm ${
-                      tier.highlight ? "bg-white" : "bg-white/80"
+                      tier.highlight ? "bg-card" : "bg-card/80"
                     }`}
                   >
                     {/* Animated Gradient Background */}
@@ -324,7 +324,7 @@ export default function Plans() {
                           {displayPrice ? (
                             <>
                               <motion.span
-                                className="text-5xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent"
+                                className="text-5xl font-bold text-foreground"
                                 key={displayPrice}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -332,19 +332,19 @@ export default function Plans() {
                               >
                                 ${displayPrice}
                               </motion.span>
-                              <span className="text-slate-600 text-lg">
+                              <span className="text-muted-foreground text-lg">
                                 /user/mo
                               </span>
                             </>
                           ) : (
-                            <span className="text-4xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+                            <span className="text-4xl font-bold text-foreground">
                               Custom
                             </span>
                           )}
                         </div>
                         {displayPrice && isAnnual && (
                           <motion.p
-                            className="text-sm text-[#8BC34A] font-semibold mt-2"
+                            className="text-sm text-[#A5D96A] font-semibold mt-2"
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.2 }}
@@ -356,7 +356,7 @@ export default function Plans() {
                       </div>
 
                       {/* Description */}
-                      <p className="text-slate-600 mb-8 leading-relaxed">
+                      <p className="text-muted-foreground mb-8 leading-relaxed">
                         {tier.pitch}
                       </p>
 
@@ -388,14 +388,14 @@ export default function Plans() {
                                   <FeatureIcon
                                     className={`h-4 w-4 ${
                                       index === 0
-                                        ? "text-[#215096]"
+                                        ? "text-[#4A8FD9]"
                                         : index === 1
-                                        ? "text-[#009688]"
-                                        : "text-[#8BC34A]"
+                                        ? "text-[#26B5A6]"
+                                        : "text-[#A5D96A]"
                                     }`}
                                   />
                                 </motion.div>
-                                <span className="text-sm text-slate-700 leading-relaxed group-hover/feature:text-slate-900 transition-colors">
+                                <span className="text-sm text-muted-foreground leading-relaxed group-hover/feature:text-foreground transition-colors">
                                   {feature.text}
                                 </span>
                               </motion.div>
@@ -413,8 +413,8 @@ export default function Plans() {
                         <Button
                           className={`w-full h-12 rounded-2xl font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 ${
                             tier.highlight
-                              ? "bg-gradient-to-r from-[#009688] to-[#00BCD4] hover:from-[#009688]/90 hover:to-[#00BCD4]/90 text-white"
-                              : "bg-white border-2 border-slate-200 text-slate-900 hover:border-slate-300 hover:bg-slate-50"
+                              ? "bg-gradient-to-r from-[#26B5A6] to-[#3DC9BA] hover:from-[#26B5A6]/90 hover:to-[#3DC9BA]/90 text-white"
+                              : "bg-card border-2 border-border text-foreground hover:border-border hover:bg-card/80"
                           }`}
                         >
                           {displayPrice ? "Get Started" : "Contact Sales"}
@@ -423,7 +423,7 @@ export default function Plans() {
                       </motion.a>
 
                       {/* Additional Info */}
-                      <p className="text-xs text-center text-slate-500 mt-4">
+                      <p className="text-xs text-center text-muted-foreground mt-4">
                         {displayPrice
                           ? "No setup fees • Cancel anytime"
                           : "Custom quote within 24 hours"}
@@ -475,10 +475,10 @@ export default function Plans() {
             ></motion.div>
 
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-[#215096] to-[#009688] bg-clip-text text-transparent">
+              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-[#4A8FD9] to-[#26B5A6] bg-clip-text text-transparent">
                 Not sure which plan is right for you?
               </h3>
-              <p className="text-slate-600 mb-8 max-w-2xl mx-auto text-lg">
+              <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
                 Let&apos;s discuss your specific needs. We&apos;ll create a
                 custom IT strategy that fits your business and budget perfectly.
               </p>
@@ -488,7 +488,7 @@ export default function Plans() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Button className="group px-8 py-4 h-auto text-lg font-semibold bg-gradient-to-r from-[#215096] to-[#009688] hover:from-[#215096]/90 hover:to-[#009688]/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl">
+                  <Button className="group px-8 py-4 h-auto text-lg font-semibold bg-gradient-to-r from-[#4A8FD9] to-[#26B5A6] hover:from-[#4A8FD9]/90 hover:to-[#26B5A6]/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl">
                     <span>Schedule Free Consultation</span>
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -500,7 +500,7 @@ export default function Plans() {
                 >
                   <Button
                     variant="outline"
-                    className="px-8 py-4 h-auto text-lg font-semibold border-2 border-[#009688] text-[#009688] hover:bg-[#009688] hover:text-white transition-all duration-300 rounded-2xl shadow-lg hover:shadow-xl"
+                    className="px-8 py-4 h-auto text-lg font-semibold border-2 border-[#26B5A6] text-[#26B5A6] hover:bg-[#26B5A6] hover:text-white transition-all duration-300 rounded-2xl shadow-lg hover:shadow-xl"
                   >
                     <Phone className="mr-2 h-5 w-5" />
                     Call Us Now
@@ -513,22 +513,22 @@ export default function Plans() {
 
         {/* Trust Indicators */}
         <motion.div
-          className="mt-16 flex flex-wrap justify-center items-center gap-8 text-sm text-slate-600"
+          className="mt-16 flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
         >
           <div className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-[#009688]" />
+            <Shield className="h-5 w-5 text-[#26B5A6]" />
             <span>No Long-term Contracts</span>
           </div>
           <div className="flex items-center gap-2">
-            <BadgeCheck className="h-5 w-5 text-[#8BC34A]" />
+            <BadgeCheck className="h-5 w-5 text-[#A5D96A]" />
             <span>Money-back Guarantee</span>
           </div>
           <div className="flex items-center gap-2">
-            <Headset className="h-5 w-5 text-[#215096]" />
+            <Headset className="h-5 w-5 text-[#4A8FD9]" />
             <span>24/7 Support Included</span>
           </div>
         </motion.div>

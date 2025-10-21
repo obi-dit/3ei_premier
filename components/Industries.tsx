@@ -69,14 +69,14 @@ export default function Industries() {
   return (
     <section
       id="industries"
-      className="py-20 bg-gradient-to-b from-slate-50 to-white"
+      className="py-20 bg-gradient-to-b from-background/95 to-background"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#4A8FD9] to-[#26B5A6] bg-clip-text text-transparent">
             Industries We Serve
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Tailored IT solutions for diverse sectors across Wyoming and beyond
           </p>
         </div>
@@ -129,14 +129,14 @@ export default function Industries() {
                   </div>
                   <h3
                     className={`font-bold text-xl mb-3 transition-colors duration-300 ${
-                      isHovered ? "text-white" : "text-gray-900"
+                      isHovered ? "text-white" : "text-foreground"
                     }`}
                   >
                     {it.title}
                   </h3>
                   <p
                     className={`text-sm leading-relaxed transition-colors duration-300 ${
-                      isHovered ? "text-white/90" : "text-gray-600"
+                      isHovered ? "text-white/90" : "text-muted-foreground"
                     }`}
                   >
                     {it.desc}
@@ -158,7 +158,7 @@ export default function Industries() {
 
         {/* Call to action */}
         <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">
+          <p className="text-muted-foreground mb-4">
             Don&apos;t see your industry? We work with businesses of all types.
           </p>
           <a

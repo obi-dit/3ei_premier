@@ -41,12 +41,12 @@ export default function WhyUs() {
   return (
     <section
       id="why"
-      className="py-16 bg-gradient-to-br from-white via-gray-50/50 to-slate-50/30"
+      className="py-16 bg-gradient-to-br from-background via-background/98 to-background/95"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl font-semibold mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-semibold mb-2 bg-gradient-to-r from-[#4A8FD9] to-[#26B5A6] bg-clip-text text-transparent">
               Why choose {BRAND.name}?
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
@@ -116,8 +116,8 @@ export default function WhyUs() {
               })}
             </ul>
           </div>
-          <div className="rounded-3xl border border-gray-200 shadow-lg p-8 bg-white">
-            <h3 className="text-xl font-bold mb-6 text-center text-gray-900">
+          <div className="rounded-3xl border border-border shadow-lg p-8 bg-card">
+            <h3 className="text-xl font-bold mb-6 text-center text-foreground">
               Our Performance
             </h3>
             <div className="grid grid-cols-2 gap-5">
@@ -145,10 +145,10 @@ export default function WhyUs() {
               ].map((m, i) => (
                 <div
                   key={i}
-                  className={`rounded-2xl border border-gray-200 p-5 transition-all duration-300 cursor-pointer group relative overflow-hidden bg-white ${
+                  className={`rounded-2xl border p-5 transition-all duration-300 cursor-pointer group relative overflow-hidden bg-card ${
                     hoveredStat === i
-                      ? "shadow-xl scale-105 -translate-y-1 border-primary"
-                      : "shadow-sm hover:shadow-md"
+                      ? "shadow-xl scale-105 -translate-y-1 border-[#4A8FD9]"
+                      : "shadow-sm hover:shadow-md border-border"
                   }`}
                   onMouseEnter={() => setHoveredStat(i)}
                   onMouseLeave={() => setHoveredStat(null)}
@@ -157,10 +157,10 @@ export default function WhyUs() {
                     className={`absolute inset-0 bg-gradient-to-br ${m.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
                   />
                   <div className="relative z-10">
-                    <div className="text-2xl font-bold text-gray-900">
+                    <div className="text-2xl font-bold text-foreground">
                       {m.k}
                     </div>
-                    <p className="text-sm text-gray-600 mt-1 font-medium group-hover:text-gray-900 transition-colors">
+                    <p className="text-sm text-muted-foreground mt-1 font-medium group-hover:text-foreground transition-colors">
                       {m.v}
                     </p>
                   </div>

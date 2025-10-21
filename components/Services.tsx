@@ -93,7 +93,7 @@ export default function Services() {
   return (
     <motion.section
       id="services"
-      className="py-20 bg-gradient-to-b from-white to-slate-50/50"
+      className="py-20 bg-gradient-to-b from-background to-background/95"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.3 }}
@@ -109,12 +109,12 @@ export default function Services() {
           </div>
 
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-[#215096] to-[#009688] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#4A8FD9] to-[#26B5A6] bg-clip-text text-transparent">
               Comprehensive IT Solutions
             </span>
           </h2>
 
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             End-to-end technology support designed for Wyoming businesses. From
             cybersecurity to cloud migration, we&apos;ve got you covered.
           </p>
@@ -130,7 +130,7 @@ export default function Services() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button className="group px-8 py-4 h-auto text-lg font-semibold bg-gradient-to-r from-[#215096] to-[#009688] hover:from-[#215096]/90 hover:to-[#009688]/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl">
+                <Button className="group px-8 py-4 h-auto text-lg font-semibold bg-gradient-to-r from-[#4A8FD9] to-[#26B5A6] hover:from-[#4A8FD9]/90 hover:to-[#26B5A6]/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 rounded-2xl">
                   <span>Get Custom Proposal</span>
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -159,7 +159,7 @@ export default function Services() {
                 }}
                 className="group relative"
               >
-                <Card className="relative overflow-hidden bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl h-full">
+                <Card className="relative overflow-hidden bg-card/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl h-full">
                   {/* Animated Background Gradient */}
                   <motion.div
                     className={`absolute inset-0 bg-gradient-to-br ${
@@ -179,7 +179,7 @@ export default function Services() {
 
                   {/* Floating Icon */}
                   <motion.div
-                    className="absolute -top-4 -right-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-white to-slate-50 shadow-lg flex items-center justify-center"
+                    className="absolute -top-4 -right-4 w-16 h-16 rounded-2xl bg-gradient-to-br from-card to-card/80 shadow-lg flex items-center justify-center"
                     animate={{
                       rotate: activeService === index ? [0, 5, -5, 0] : 0,
                       scale: activeService === index ? [1, 1.1, 1] : 1,
@@ -207,10 +207,10 @@ export default function Services() {
                     {/* Service Header */}
                     <div className="mb-6">
                       <motion.h3
-                        className="text-xl font-bold mb-3 group-hover:text-[#215096] transition-colors duration-300"
+                        className="text-xl font-bold mb-3 text-foreground group-hover:text-[#4A8FD9] transition-colors duration-300"
                         animate={{
                           color:
-                            activeService === index ? "#215096" : undefined,
+                            activeService === index ? "#4A8FD9" : undefined,
                         }}
                       >
                         {service.title}
@@ -243,7 +243,7 @@ export default function Services() {
                       {service.points.map((point, pointIndex) => (
                         <motion.div
                           key={pointIndex}
-                          className="flex items-start gap-3 text-sm text-slate-600"
+                          className="flex items-start gap-3 text-sm text-muted-foreground"
                           initial={{ opacity: 0, x: -20 }}
                           animate={{
                             opacity: 1,
@@ -350,9 +350,11 @@ export default function Services() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="bg-gradient-to-r from-[#215096]/5 via-[#009688]/5 to-[#8BC34A]/5 rounded-3xl p-12 border border-[#215096]/10">
-            <h3 className="text-2xl font-bold mb-4">Need a Custom Solution?</h3>
-            <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+          <div className="bg-gradient-to-r from-[#4A8FD9]/10 via-[#26B5A6]/10 to-[#A5D96A]/10 rounded-3xl p-12 border border-[#4A8FD9]/20">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">
+              Need a Custom Solution?
+            </h3>
+            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               Every business is unique. Let us create a tailored IT strategy
               that fits your specific needs and budget.
             </p>
@@ -362,7 +364,7 @@ export default function Services() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button className="px-8 py-3 bg-gradient-to-r from-[#215096] to-[#009688] text-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button className="px-8 py-3 bg-gradient-to-r from-[#4A8FD9] to-[#26B5A6] text-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                   Schedule Consultation
                 </Button>
               </motion.a>
@@ -373,7 +375,7 @@ export default function Services() {
               >
                 <Button
                   variant="outline"
-                  className="px-8 py-3 border-2 border-[#009688] text-[#009688] hover:bg-[#009688] hover:text-white rounded-2xl transition-all duration-300"
+                  className="px-8 py-3 border-2 border-[#26B5A6] text-[#26B5A6] hover:bg-[#26B5A6] hover:text-white rounded-2xl transition-all duration-300"
                 >
                   View Pricing Plans
                 </Button>

@@ -73,9 +73,9 @@ export default function Contact() {
       title: "Call Us",
       value: BRAND.phone,
       description: "Mon-Fri 8AM-6PM MT",
-      color: "from-[#215096] to-[#1976D2]",
-      bgColor: "bg-[#215096]/5",
-      iconColor: "text-[#215096]",
+      color: "from-[#4A8FD9] to-[#5BA3E0]",
+      bgColor: "bg-[#4A8FD9]/10",
+      iconColor: "text-[#4A8FD9]",
       href: `tel:${BRAND.phone.replace(/\s/g, "")}`,
     },
     {
@@ -83,27 +83,27 @@ export default function Contact() {
       title: "Email Us",
       value: BRAND.email,
       description: "24-hour response time",
-      color: "from-[#009688] to-[#00BCD4]",
-      bgColor: "bg-[#009688]/5",
-      iconColor: "text-[#009688]",
+      color: "from-[#26B5A6] to-[#3DC9BA]",
+      bgColor: "bg-[#26B5A6]/10",
+      iconColor: "text-[#26B5A6]",
       href: `mailto:${BRAND.email}`,
     },
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      value: BRAND.address,
-      description: "Serving all of Wyoming",
-      color: "from-[#8BC34A] to-[#CDDC39]",
-      bgColor: "bg-[#8BC34A]/5",
-      iconColor: "text-[#8BC34A]",
-      href: "#",
-    },
+    // {
+    //   icon: MapPin,
+    //   title: "Visit Us",
+    //   value: BRAND.address,
+    //   description: "Serving all of Wyoming",
+    //   color: "from-[#A5D96A] to-[#B8E285]",
+    //   bgColor: "bg-[#A5D96A]/10",
+    //   iconColor: "text-[#A5D96A]",
+    //   href: "#",
+    // },
   ];
 
   return (
     <motion.section
       id="contact"
-      className="relative py-24 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden"
+      className="relative py-24 bg-gradient-to-b from-background via-background/95 to-background overflow-hidden"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.2 }}
@@ -147,12 +147,12 @@ export default function Contact() {
           </div>
 
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-[#215096] via-[#009688] to-[#8BC34A] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#4A8FD9] via-[#26B5A6] to-[#A5D96A] bg-clip-text text-transparent">
               Let&apos;s Talk About Your IT
             </span>
           </h2>
 
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to transform your technology? Fill out the form and we&apos;ll
             reach out within one business day.
           </p>
@@ -175,7 +175,7 @@ export default function Contact() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <Card className="relative overflow-hidden bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl h-full cursor-pointer group">
+                <Card className="relative overflow-hidden bg-card/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-500 rounded-3xl h-full cursor-pointer group">
                   {/* Animated Background */}
                   <motion.div
                     className={`absolute inset-0 bg-gradient-to-br ${method.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
@@ -204,13 +204,15 @@ export default function Contact() {
                       <Icon className={`h-8 w-8 ${method.iconColor}`} />
                     </motion.div>
 
-                    <h3 className="font-bold text-lg mb-2">{method.title}</h3>
+                    <h3 className="font-bold text-lg mb-2 text-foreground">
+                      {method.title}
+                    </h3>
                     <p
                       className={`text-sm font-semibold ${method.iconColor} mb-1`}
                     >
                       {method.value}
                     </p>
-                    <p className="text-xs text-slate-500">
+                    <p className="text-xs text-muted-foreground">
                       {method.description}
                     </p>
 
@@ -240,15 +242,17 @@ export default function Contact() {
             className="space-y-8"
           >
             {/* Main Info Card */}
-            <Card className="rounded-3xl border-0 shadow-xl bg-gradient-to-br from-white to-slate-50/50 overflow-hidden">
+            <Card className="rounded-3xl border-0 shadow-xl bg-gradient-to-br from-card to-card/50 overflow-hidden">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#215096] to-[#009688] flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#4A8FD9] to-[#26B5A6] flex items-center justify-center flex-shrink-0">
                     <MessageSquare className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Why Contact Us?</h3>
-                    <p className="text-slate-600 leading-relaxed">
+                    <h3 className="text-2xl font-bold mb-2 text-foreground">
+                      Why Contact Us?
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
                       Get a free IT assessment and discover how we can optimize
                       your technology infrastructure.
                     </p>
@@ -260,17 +264,17 @@ export default function Contact() {
                     {
                       icon: CheckCircle2,
                       text: "Free consultation & IT assessment",
-                      color: "text-[#8BC34A]",
+                      color: "text-[#A5D96A]",
                     },
                     {
                       icon: CheckCircle2,
                       text: "Custom proposal within 24 hours",
-                      color: "text-[#009688]",
+                      color: "text-[#26B5A6]",
                     },
                     {
                       icon: CheckCircle2,
                       text: "No obligation, no pressure",
-                      color: "text-[#215096]",
+                      color: "text-[#4A8FD9]",
                     },
                   ].map((item, index) => (
                     <motion.div
@@ -285,7 +289,7 @@ export default function Contact() {
                       <item.icon
                         className={`h-5 w-5 ${item.color} flex-shrink-0`}
                       />
-                      <span className="text-sm text-slate-700">
+                      <span className="text-sm text-muted-foreground">
                         {item.text}
                       </span>
                     </motion.div>
@@ -311,13 +315,15 @@ export default function Contact() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Card className="rounded-2xl border-0 shadow-lg bg-white">
+                  <Card className="rounded-2xl border-0 shadow-lg bg-card">
                     <CardContent className="p-6 text-center">
-                      <stat.icon className="h-8 w-8 text-[#009688] mx-auto mb-2" />
-                      <p className="text-2xl font-bold text-slate-900">
+                      <stat.icon className="h-8 w-8 text-[#26B5A6] mx-auto mb-2" />
+                      <p className="text-2xl font-bold text-foreground">
                         {stat.value}
                       </p>
-                      <p className="text-xs text-slate-600">{stat.label}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {stat.label}
+                      </p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -332,10 +338,10 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="rounded-3xl border-0 shadow-2xl bg-white overflow-hidden relative">
+            <Card className="rounded-3xl border-0 shadow-2xl bg-card overflow-hidden relative">
               {/* Animated top border */}
               <motion.div
-                className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#215096] via-[#009688] to-[#8BC34A]"
+                className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#4A8FD9] via-[#26B5A6] to-[#A5D96A]"
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
@@ -371,8 +377,8 @@ export default function Contact() {
                             <User
                               className={`h-4 w-4 transition-colors ${
                                 focusedField === "name"
-                                  ? "text-[#215096]"
-                                  : "text-slate-400"
+                                  ? "text-[#4A8FD9]"
+                                  : "text-muted-foreground"
                               }`}
                             />
                           </div>
@@ -387,7 +393,7 @@ export default function Contact() {
                             onBlur={() => setFocusedField(null)}
                             className={`pl-10 rounded-2xl transition-all duration-300 ${
                               focusedField === "name"
-                                ? "border-[#215096] ring-2 ring-[#215096]/20"
+                                ? "border-[#4A8FD9] ring-2 ring-[#4A8FD9]/20"
                                 : ""
                             }`}
                           />
@@ -405,8 +411,8 @@ export default function Contact() {
                             <Mail
                               className={`h-4 w-4 transition-colors ${
                                 focusedField === "email"
-                                  ? "text-[#009688]"
-                                  : "text-slate-400"
+                                  ? "text-[#26B5A6]"
+                                  : "text-muted-foreground"
                               }`}
                             />
                           </div>
@@ -425,7 +431,7 @@ export default function Contact() {
                             onBlur={() => setFocusedField(null)}
                             className={`pl-10 rounded-2xl transition-all duration-300 ${
                               focusedField === "email"
-                                ? "border-[#009688] ring-2 ring-[#009688]/20"
+                                ? "border-[#26B5A6] ring-2 ring-[#26B5A6]/20"
                                 : ""
                             }`}
                           />
@@ -445,8 +451,8 @@ export default function Contact() {
                             <Building2
                               className={`h-4 w-4 transition-colors ${
                                 focusedField === "company"
-                                  ? "text-[#8BC34A]"
-                                  : "text-slate-400"
+                                  ? "text-[#A5D96A]"
+                                  : "text-muted-foreground"
                               }`}
                             />
                           </div>
@@ -463,7 +469,7 @@ export default function Contact() {
                             onBlur={() => setFocusedField(null)}
                             className={`pl-10 rounded-2xl transition-all duration-300 ${
                               focusedField === "company"
-                                ? "border-[#8BC34A] ring-2 ring-[#8BC34A]/20"
+                                ? "border-[#A5D96A] ring-2 ring-[#A5D96A]/20"
                                 : ""
                             }`}
                           />
@@ -481,8 +487,8 @@ export default function Contact() {
                             <Users
                               className={`h-4 w-4 transition-colors ${
                                 focusedField === "employees"
-                                  ? "text-[#1976D2]"
-                                  : "text-slate-400"
+                                  ? "text-[#5BA3E0]"
+                                  : "text-muted-foreground"
                               }`}
                             />
                           </div>
@@ -501,7 +507,7 @@ export default function Contact() {
                             onBlur={() => setFocusedField(null)}
                             className={`pl-10 rounded-2xl transition-all duration-300 ${
                               focusedField === "employees"
-                                ? "border-[#1976D2] ring-2 ring-[#1976D2]/20"
+                                ? "border-[#5BA3E0] ring-2 ring-[#5BA3E0]/20"
                                 : ""
                             }`}
                           />
@@ -528,7 +534,7 @@ export default function Contact() {
                           onBlur={() => setFocusedField(null)}
                           className={`min-h-32 rounded-2xl transition-all duration-300 resize-none ${
                             focusedField === "message"
-                              ? "border-[#215096] ring-2 ring-[#215096]/20"
+                              ? "border-[#4A8FD9] ring-2 ring-[#4A8FD9]/20"
                               : ""
                           }`}
                         />
@@ -541,7 +547,7 @@ export default function Contact() {
                       >
                         <Button
                           type="submit"
-                          className="w-full h-14 rounded-2xl text-lg font-semibold bg-gradient-to-r from-[#215096] to-[#009688] hover:from-[#215096]/90 hover:to-[#009688]/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 group"
+                          className="w-full h-14 rounded-2xl text-lg font-semibold bg-gradient-to-r from-[#4A8FD9] to-[#26B5A6] hover:from-[#4A8FD9]/90 hover:to-[#26B5A6]/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 group"
                         >
                           <span>Send Message</span>
                           <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -549,7 +555,7 @@ export default function Contact() {
                       </motion.div>
 
                       {/* Privacy Notice */}
-                      <p className="text-xs text-center text-slate-500 leading-relaxed">
+                      <p className="text-xs text-center text-muted-foreground leading-relaxed">
                         🔒 By submitting, you consent to being contacted about
                         services. We never sell your data.
                       </p>
@@ -576,7 +582,7 @@ export default function Contact() {
                           damping: 15,
                           delay: 0.2,
                         }}
-                        className="inline-flex w-24 h-24 items-center justify-center rounded-full bg-gradient-to-br from-[#8BC34A] to-[#CDDC39] mb-6"
+                        className="inline-flex w-24 h-24 items-center justify-center rounded-full bg-gradient-to-br from-[#A5D96A] to-[#B8E285] mb-6"
                       >
                         <CheckCircle2 className="h-12 w-12 text-white" />
                       </motion.div>
@@ -585,7 +591,7 @@ export default function Contact() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="text-2xl font-bold mb-4"
+                        className="text-2xl font-bold mb-4 text-foreground"
                       >
                         Message Sent Successfully! 🎉
                       </motion.h3>
@@ -594,7 +600,7 @@ export default function Contact() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
-                        className="text-slate-600 mb-2"
+                        className="text-muted-foreground mb-2"
                       >
                         Thanks for reaching out! We&apos;ll get back to you
                         within one business day.
@@ -604,7 +610,7 @@ export default function Contact() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
-                        className="text-sm text-slate-500"
+                        className="text-sm text-muted-foreground"
                       >
                         Check your email for a confirmation.
                       </motion.p>
@@ -624,17 +630,17 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          <div className="inline-flex flex-wrap items-center justify-center gap-8 px-8 py-4 bg-white/80 backdrop-blur-sm rounded-full border border-slate-200 shadow-lg">
-            <div className="flex items-center gap-2 text-sm text-slate-600">
-              <CheckCircle2 className="h-4 w-4 text-[#8BC34A]" />
+          <div className="inline-flex flex-wrap items-center justify-center gap-8 px-8 py-4 bg-card/80 backdrop-blur-sm rounded-full border border-border shadow-lg">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <CheckCircle2 className="h-4 w-4 text-[#A5D96A]" />
               <span>Quick Response</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-slate-600">
-              <CheckCircle2 className="h-4 w-4 text-[#009688]" />
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <CheckCircle2 className="h-4 w-4 text-[#26B5A6]" />
               <span>Free Consultation</span>
             </div>
-            <div className="flex items-center gap-2 text-sm text-slate-600">
-              <CheckCircle2 className="h-4 w-4 text-[#215096]" />
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <CheckCircle2 className="h-4 w-4 text-[#4A8FD9]" />
               <span>No Obligation</span>
             </div>
           </div>

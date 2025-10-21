@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 0 0% 9%;
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 9%;
-  --primary: 215 65% 35%; /* Deep blue from logo #215096 */
+  --background: 0 0% 10%;
+  --foreground: 0 0% 95%;
+  --card: 0 0% 12%;
+  --card-foreground: 0 0% 95%;
+  --popover: 0 0% 12%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 215 65% 45%; /* Deep blue from logo #215096 */
   --primary-foreground: 0 0% 98%;
-  --secondary: 183 100% 27%; /* Teal from logo #009688 */
+  --secondary: 183 100% 37%; /* Teal from logo #009688 */
   --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 45%;
-  --accent: 89 55% 50%; /* Lime green from logo #8BC34A */
-  --accent-foreground: 0 0% 9%;
+  --muted: 0 0% 18%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 89 55% 55%; /* Lime green from logo #8BC34A */
+  --accent-foreground: 0 0% 10%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 215 65% 35%; /* Deep blue from logo */
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 215 65% 45%; /* Deep blue from logo */
   --radius: 0.5rem;
 }
 

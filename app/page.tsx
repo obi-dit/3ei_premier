@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 
 export default function WyomiMSPWebsite() {
   return (
-    <main className="font-sans text-slate-900">
+    <main className="font-sans text-foreground">
       <Nav />
       <Hero />
       <Services />

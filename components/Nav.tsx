@@ -20,13 +20,15 @@ const navItems = [
 export default function Nav() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur border-b">
+    <header className="fixed top-0 inset-x-0 z-50 bg-background/70 backdrop-blur border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-3">
             <Logo size="lg" />
             <div className="leading-tight">
-              <p className="font-semibold text-lg">{BRAND.name}</p>
+              <p className="font-semibold text-lg text-foreground">
+                {BRAND.name}
+              </p>
               <p className="text-xs text-muted-foreground">{BRAND.tagline}</p>
             </div>
           </a>
@@ -67,8 +69,8 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* {open && (
-        <div className="md:hidden border-t bg-white">
+      {open && (
+        <div className="md:hidden border-t ">
           <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-3">
             {navItems.map((n) => (
               <a
@@ -80,23 +82,9 @@ export default function Nav() {
                 {n.label}
               </a>
             ))}
-            <Link href="/login" onClick={() => setOpen(false)}>
-              <Button
-                variant="outline"
-                className="w-full rounded-2xl border-2 border-slate-200"
-              >
-                <LogIn className="h-4 w-4 mr-2" />
-                Login
-              </Button>
-            </Link>
-            <a href="#contact" onClick={() => setOpen(false)}>
-              <Button className="w-full rounded-2xl bg-gradient-to-r from-[#215096] to-[#009688]">
-                Get Support
-              </Button>
-            </a>
           </div>
         </div>
-      )} */}
+      )}
     </header>
   );
 }
