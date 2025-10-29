@@ -119,7 +119,7 @@ export default function Hero() {
                     IT Solutions
                   </span>
                   <br />
-                  <span className="text-muted-foreground">for Wyoming</span>
+                  {/* <span className="text-muted-foreground">for Wyoming</span> */}
                 </h1>
 
                 <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">

@@ -19,9 +19,9 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-semibold text-foreground">Service Area</p>
-            <p className="text-muted-foreground mt-2">
+            {/* <p className="text-muted-foreground mt-2">
               Cheyenne • Casper • Laramie • Gillette • Rock Springs • Sheridan
-            </p>
+            </p> */}
           </div>
           <div>
             <p className="font-semibold text-foreground">
