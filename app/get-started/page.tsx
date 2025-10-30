@@ -135,8 +135,8 @@ function GetStartedContent() {
             transition={{ delay: 0.5 }}
             className="text-muted-foreground mb-2 max-w-md"
           >
-            We've received your request for the {plan.name} plan. Our team will
-            contact you within 24 hours to get you started!
+            We&apos;ve received your request for the {plan.name} plan. Our team
+            will contact you within 24 hours to get you started!
           </motion.p>
 
           <motion.p
@@ -180,7 +180,7 @@ function GetStartedContent() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground">
-            Fill out the form below and we'll get you set up right away
+            Fill out the form below and we&apos;ll get you set up right away
           </p>
         </motion.div>
 
@@ -252,9 +252,9 @@ function GetStartedContent() {
                     </span>
                   </div>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• We'll review your information</li>
+                    <li>• We&apos;ll review your information</li>
                     <li>• Our team will contact you within 24 hours</li>
-                    <li>• We'll schedule your onboarding session</li>
+                    <li>• We&apos;ll schedule your onboarding session</li>
                     <li>• Get started with full support!</li>
                   </ul>
                 </div>
@@ -443,4 +443,3 @@ export default function GetStartedPage() {
     </Suspense>
   );
 }
-
