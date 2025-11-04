@@ -105,7 +105,7 @@ export default function Hero() {
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-[#8BC34A] rounded-full animate-pulse"></div>
                   <span className="text-sm font-semibold text-[#215096]">
-                    Trusted by 500+ Wyoming Businesses
+                    Trusted by 500+ Businesses
                   </span>
                 </div>
               </motion.div>
@@ -135,7 +135,7 @@ export default function Hero() {
                   <span className="font-semibold text-[#A5D96A]">
                     predictable pricing
                   </span>{" "}
-                  for Wyoming businesses.
+                  for businesses.
                 </p>
               </div>
 

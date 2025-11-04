@@ -6,7 +6,7 @@ import Logo from "@/components/Logo";
 
 const BRAND = {
   name: "3i Premier Tech Solutions",
-  tagline: "Modern Managed IT for the State of Wyoming",
+  tagline: "Modern Managed IT for businesses",
 };
 
 const navItems = [

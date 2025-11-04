@@ -115,7 +115,7 @@ export default function Services() {
           </h2>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            End-to-end technology support designed for Wyoming businesses. From
+            End-to-end technology support designed for businesses. From
             cybersecurity to cloud migration, we&apos;ve got you covered.
           </p>
 

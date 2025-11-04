@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "3i Premier Tech Solutions - Managed IT Services for Wyoming",
+  title: "3i Premier Tech Solutions - Managed IT Services",
   description:
-    "Modern Managed IT for Wyoming businesses. 24/7 support, cybersecurity, cloud services, and compliance solutions with local experts.",
+    "Modern Managed IT for businesses. 24/7 support, cybersecurity, cloud services, and compliance solutions with local experts.",
 };
 
 export default function RootLayout({

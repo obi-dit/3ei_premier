@@ -20,8 +20,8 @@ import { Textarea } from "@/components/ui/textarea";
 
 const BRAND = {
   phone: "(307) 555‑0149",
-  email: "hello@3ipremiertech.com",
-  address: "Headquarters — State of Wyoming",
+  email: "support@3ipremiertech.com",
+  address: "Headquarters — 150 E B St, Casper, WY 82601",
 };
 
 // Animation variants

@@ -10,7 +10,7 @@ const BRAND = {
 const bullets = [
   {
     title: "Local & Responsive",
-    desc: "Wyoming‑based engineers with guaranteed SLA.",
+    desc: "Engineers with guaranteed SLA.",
     icon: MapPin,
     color: "from-blue-500 to-cyan-500",
   },
@@ -51,7 +51,7 @@ export default function WhyUs() {
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               We combine enterprise‑grade tooling with small‑town
-              accountability. Our team lives and works in Wyoming.
+              accountability.
             </p>
             <ul className="mt-8 space-y-3">
               {bullets.map((b, i) => {

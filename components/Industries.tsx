@@ -77,7 +77,7 @@ export default function Industries() {
             Industries We Serve
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Tailored IT solutions for diverse sectors across Wyoming and beyond
+            Tailored IT solutions for diverse sectors
           </p>
         </div>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
