@@ -39,6 +39,10 @@ export default function Plans() {
   const [isAnnual, setIsAnnual] = useState(false);
   const [hoveredPlan, setHoveredPlan] = useState<number | null>(null);
 
+  const handlePlanClick = (link: string) => {
+    window.open(link, "_blank");
+  };
+
   const tiers = [
     {
       name: "Essential",
@@ -48,6 +52,7 @@ export default function Plans() {
       color: "from-[#4A8FD9] to-[#5BA3E0]",
       bgColor: "bg-[#4A8FD9]/10",
       borderColor: "border-[#4A8FD9]/20",
+      link: "https://buy.stripe.com/fZufZg8rM1dr8YkaC9gbm03",
       pitch: "Best for teams getting started with managed IT.",
       features: [
         { text: "Unlimited remote support", icon: Headset },
@@ -65,6 +70,7 @@ export default function Plans() {
       color: "from-[#26B5A6] to-[#3DC9BA]",
       bgColor: "bg-[#26B5A6]/10",
       borderColor: "border-[#26B5A6]/30",
+      link: "https://buy.stripe.com/28E5kCcI2aO16QcaC9gbm00",
       pitch: "Security‑forward plan with compliance basics.",
       features: [
         { text: "Everything in Essential", icon: Check },
@@ -84,6 +90,7 @@ export default function Plans() {
       bgColor: "bg-[#A5D96A]/10",
       borderColor: "border-[#A5D96A]/20",
       pitch: "Advanced security, SOC, and governance.",
+      link: "https://buy.stripe.com/3cs8w88rM1dr8YkaEF",
       features: [
         { text: "XDR + SOC 24/7", icon: Shield },
         { text: "SIEM + log retention", icon: Server },
@@ -152,7 +159,7 @@ export default function Plans() {
           </p>
 
           {/* Billing Toggle */}
-          <motion.div
+          {/* <motion.div
             className="inline-flex items-center gap-4 p-2 bg-card rounded-full shadow-lg border border-border"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -199,7 +206,7 @@ export default function Plans() {
                 Save 10%
               </motion.span>
             )}
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         {/* Pricing Cards */}
@@ -406,13 +413,7 @@ export default function Plans() {
 
                       {/* CTA Button */}
                       <motion.a
-                        href={
-                          displayPrice
-                            ? `/get-started?plan=${tier.name.toLowerCase()}&billing=${
-                                isAnnual ? "annual" : "monthly"
-                              }`
-                            : "#contact"
-                        }
+                        href={displayPrice ? `${tier.link}` : "#contact"}
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
                       >
